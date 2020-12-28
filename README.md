@@ -19,9 +19,7 @@ have different memory space so both will get global value as 10. In case
 of parent process value of global variable is increasing linearly by 1.
 It goes up to 100, ie 10,11,12,…..100. And in case of child process as
 it has different memory so it will have global value as 10 and it will
-be decreasing linearly up to -90, ie 10,9,8,7…..-
-
-90.
+be decreasing linearly up to -90, ie 10,9,8,7…-90.
 
 The pthread\_create() system call code : In case of pthread\_create(),
 parent thread is increasing the value of global from 10 to 100 linearly
@@ -37,7 +35,6 @@ parent thread started first and let say it went up to ‘x’ i.e. 10, 11,
 12, 13,….x and we notice a context switching and child process goes to
 ‘y’ i.e. x, x-1, x-2, x-3, ….. y.
 
-![](media/index-2_1.png){width="6.5in" height="2.861111111111111in"}
 
 This process continues until one of the thread completes its while loop
 and after that the second thread completes its process and we have
